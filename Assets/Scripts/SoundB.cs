@@ -42,6 +42,6 @@ public class SoundB : MonoBehaviour
     void FireBullet()
     {
         // Code that fires bullet
-        audioSource.PlayOneShot(shooting);
+     //   audioSource.PlayOneShot(shooting);
     }
 }
