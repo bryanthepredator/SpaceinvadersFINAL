@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
+    public GameObject player;
     public GameObject bullet;
     public GameObject bulletClone;
     // Start is called before the first frame update
@@ -45,7 +46,7 @@ public class PlayerScript : MonoBehaviour
     {
         if (Input.GetKeyDown (KeyCode.Space))
         {
-            bulletClone = Instantiate(bullet, new Vector3(0, 0, 0), transform.rotation) as GameObject;
+            bulletClone = Instantiate(bullet, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f, 0), transform.rotation) as GameObject;
         }
     }
 
