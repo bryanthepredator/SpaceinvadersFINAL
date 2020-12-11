@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5928610118062434267}
   - component: {fileID: 7480496744900679052}
   - component: {fileID: 8755049703973798972}
+  - component: {fileID: -5370218755424666600}
   m_Layer: 0
   m_Name: Enemy03
   m_TagString: Enemy
@@ -103,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!61 &8755049703973798972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -130,3 +131,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.01, y: 0.76}
   m_EdgeRadius: 0
+--- !u!114 &-5370218755424666600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37156421057364375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49dcc21445a251241a062696f7da946e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 37156421057364375}
+  enemyBullet: {fileID: 3343283705059645277, guid: fed0eaa4a7b02a148bac0c9782fd5bd9,
+    type: 3}
+  enemyBulletClone: {fileID: 0}

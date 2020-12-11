@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4392036543663973837}
   - component: {fileID: 5483454187191121242}
   - component: {fileID: -1728375150151103571}
+  - component: {fileID: 1108070340218786830}
   m_Layer: 0
   m_Name: Enemy04
   m_TagString: Enemy
@@ -129,4 +130,20 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
+--- !u!114 &1108070340218786830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2649198111780223413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49dcc21445a251241a062696f7da946e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 2649198111780223413}
+  enemyBullet: {fileID: 3343283705059645277, guid: fed0eaa4a7b02a148bac0c9782fd5bd9,
+    type: 3}
+  enemyBulletClone: {fileID: 0}
