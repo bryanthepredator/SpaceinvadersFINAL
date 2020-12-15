@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     public GameObject enemyBullet;
+    Vector3 respawn = new Vector3(8, 4, 0);
     // Start is called before the first frame update
     void Start()
     {
@@ -21,7 +22,14 @@ public class EnemyBullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.transform.position = respawn;
+            Destroy(enemyBullet);
+
+            GameManager.lives--;
+            GameManager.playGame = false;
+        }
+        if (collision.gameObject.tag == "Finish")
+        {
             Destroy(enemyBullet);
         }
     }

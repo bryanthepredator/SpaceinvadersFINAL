@@ -23,6 +23,11 @@ public class BulletScript : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(bullet);
+            GameManager.playGame = true;
+        }
+        if (collision.gameObject.tag == "Finish")
+        {
+            Destroy(bullet);
         }
     }
 }

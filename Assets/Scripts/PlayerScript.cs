@@ -16,8 +16,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {// Directions are flipped since our object is flipped 180 degrees to have face up
-        movement();
-        fireBullet();
+        if (GameManager.lives > 0)
+        {
+            movement();
+            fireBullet();
+        }
     }
 
     void movement()
@@ -39,12 +42,13 @@ public class PlayerScript : MonoBehaviour
         {
             transform.Translate(new Vector3(0, 5 * Time.deltaTime, 0));
         }
+       
 
     }
 
     void fireBullet()
     {
-        if (Input.GetKeyDown (KeyCode.Space))
+        if (Input.GetKeyDown (KeyCode.Space) && bulletClone == null)
         {
             bulletClone = Instantiate(bullet, new Vector3(player.transform.position.x, player.transform.position.y + 0.6f, 0), transform.rotation) as GameObject;
         }
